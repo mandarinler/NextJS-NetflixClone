@@ -25,3 +25,8 @@
     font-weight: 700;
     letter-spacing: 2px;
   }
+  @media (max-width: 768px) {
+    .navigationMenu {
+      gap: 24px; /* Reduce the gap for smaller screens */
+    }
+  }
