@@ -8,7 +8,7 @@ async function delay(ms) {
 }
 
 async function HomePage({ params }) {
-await delay(20000)
+await delay(2000)
 
   let selectedCategory;
 
