@@ -8,14 +8,13 @@ import { MoviesSection } from '@/components/movies-section'
 function HomeContainer({selectedCategory}) {
   return (
     <div>
-      <FeaturedMovie movie={Movies.results[6]}/>
+      <FeaturedMovie movie={Movies.results[Math.floor(Math.random() * 10) + 1]}/>
       <Categories categories={Genres.genres.slice(0,5)}/>
 
-      {selectedCategory.movies?.length > 0 && (<MoviesSection 
-      title=
-      {Genres.genres.find((genre) => `${genre.id}` === selectedCategory.id)?.name
-      }
-      movies={selectedCategory.movies}/>)}
+      {selectedCategory.movies?.length > 0 && 
+      (<MoviesSection 
+      title = {Genres.genres.find((genre) => `${genre.id}` === selectedCategory.id)?.name}
+      movies = {selectedCategory.movies.slice(1,7)}/>)}
 
       <MoviesSection 
       title="Popular Films"
